@@ -17,6 +17,15 @@ public class runProg {
         c1.sign();        
     }
 
+    public static void validate(int age) throws Exception{
+        if (age < 18) {
+            throw new Exception("Age not valid.");
+        }
+        else {
+            System.out.println("Thank you for voting!");
+        }
+    }
+
     public static void dbcon() {
         try {
             // load driver
@@ -25,7 +34,7 @@ public class runProg {
             // creating connection
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/db1", "root", "12345");
     
-            if(con.isClosed()) {
+            if (con.isClosed()) {
                 System.out.println("Connection closed!");
             }
             else {
@@ -152,11 +161,19 @@ public class runProg {
 
     public static void main(String[] args) {
         // inheritance();
+        try {
+            validate(17);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        finally {
+            System.out.println("Thanks for your presence.");
+        }
         // dbcon();
         // fileByte();
         // fileCharCopyFile();
         // fileCharReadWrite();
         // fileRandAcc();
-        fileObj();
+        // fileObj();
     }   
 }
