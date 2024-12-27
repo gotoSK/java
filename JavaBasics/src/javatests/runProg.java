@@ -17,9 +17,9 @@ public class runProg {
         c1.sign();        
     }
 
-    public static void validate(int age) throws Exception{
+    public static void validate(int age) throws InvalidAgeException{
         if (age < 18) {
-            throw new Exception("Age not valid.");
+            throw new InvalidAgeException("Age not valid.");
         }
         else {
             System.out.println("Thank you for voting!");
@@ -162,8 +162,8 @@ public class runProg {
     public static void main(String[] args) {
         // inheritance();
         try {
-            validate(17);
-        } catch (Exception e) {
+            validate(10);
+        } catch (InvalidAgeException e) {
             System.out.println(e.getMessage());
         }
         finally {
