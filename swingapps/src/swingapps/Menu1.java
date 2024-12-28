@@ -7,7 +7,7 @@ import javax.swing.*;
 // import java.awt.event.ActionListener;
 
 public class Menu1 {
-    public static void menu1() {
+    public static void menu1(boolean save) {
         // Create the main frame
         JFrame frame = new JFrame("Simplified Swing Menu Demo");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -52,7 +52,7 @@ public class Menu1 {
 
         // Add a menu item that can be enabled/disabled
         JMenuItem saveItem = new JMenuItem("Save");
-        saveItem.setEnabled(false); // Initially disabled
+        saveItem.setEnabled(save); // Initially disabled
         enableEditing.addActionListener(e -> saveItem.setEnabled(enableEditing.isSelected()));
         fileMenu.add(saveItem);
 
