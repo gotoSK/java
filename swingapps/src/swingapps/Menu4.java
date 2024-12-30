@@ -1,6 +1,6 @@
 package swingapps;
 
-// Internal Frames,Frames, Tables, Trees, and Tables.
+// Internal Frames, Frames, Tables, Trees, and Tables.
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
