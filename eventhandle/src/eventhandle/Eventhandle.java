@@ -5,9 +5,9 @@ public class Eventhandle {
         // new ActionEventDemo();
         // new KeyEventDemo();
         // new FocusEventDemo();
-        // new MouseEventDemo();
+        new MouseEventDemo();
         // new WindowEventDemo();
-        new ItemEventDemo();
+        // new ItemEventDemo();
     }
     
 }
